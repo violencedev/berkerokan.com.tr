@@ -10,6 +10,7 @@
     {% if request.user.is_authenticated %}
     <h1>Hesap: {{ request.user.username }}</h1>
     <a href="profile">Hesabım</a>
+    <a href="authentication/change-password">Şifre Değiştir</a>
     <a href="authentication/logout">Çıkış Yap</a>
     {% else %}
     <h1>Anasayfa, giriş yapabilir ve kayıt olabilirsin</h1>

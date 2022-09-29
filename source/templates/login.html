@@ -18,6 +18,7 @@
         id="username"
         name="username"
         placeholder="violencedev"
+        value="{{ username }}"
       />
       <br />
       <label for="password">Şifren:</label>
@@ -25,14 +26,23 @@
         type="password"
         id="password"
         name="password"
-        placeholder="******"
+        placeholder="*****"
+        value="{{ password }}"
       />
       <br /><br />
-      <input type="submit" value="Giriş Yap" />
-    </form>
+      <label for="remember-me">Beni hatırla</label>
+      <input
+        type="checkbox"
+        name="remember-me"
+        id="remember-me"
+        {{ checked }}
+      /><br /><br />
+      <input type="submit" value="Giriş Yap" /> 
+    </form> 
     <br />
     <br />
 
+    <a href="forgot-credentials">Bilgilerimi unuttum</a> <br>
     <a href="../">Geri Dön</a>
   </body>
 </html>
