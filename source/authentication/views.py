@@ -15,7 +15,6 @@ import hashlib
 
 
 def LoginView(request):
-    print(request.session["remember_me"])
     if not request.user.is_authenticated:
         try:
             request.session["remember_me"]
@@ -25,9 +24,6 @@ def LoginView(request):
                 "password": "",
                 "checked": "",
             }
-
-        print(request.session["remember_me"])
-
         return render(request, "login.html", request.session["remember_me"])
     else:
         return redirect("home")
