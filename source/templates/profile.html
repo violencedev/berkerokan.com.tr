@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berker Okan - Profil | {{ username }} </title>
+</head>
+<body>
+  <h1>Profil (#{{ account_id }} / #{{ id }})</h1>
+
+  <p>Kullanıcı Adı: {{ username }}</p>
+
+  <p>İsim: {{ first_name }} {{ last_name }}</p>
+
+
+  {% if editable == True %}
+
+  <p>E-Posta: {{ email }} {% if email_verified == True %} <span style="color: green">(Doğrulanmış)</span> {% else %}
+    <a href="/authentication/verify-email" style="text-decoration: none;"><span style="color: red;">(Doğrulanmamış)</span> </a>
+  {% endif %} </p> 
+  <p>E-Posta Bülteni: {{ is_in_mailing_list }}</p>
+  <p>Diğerleri Profilimi Görebilir: {{ others_can_see_my_profile }}</p>
+    <a href="edit">Düzenle</a>
+  
+  {% else %} 
+  <p>E-Posta: {{ email }}</p>
+  {% endif %}
+</body>
+</html>

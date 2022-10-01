@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Berker Okan - E-Posta Doğrulama</title>
+</head>
+<body>
+  <h1>{{ request.user.username }} | E-Posta Doğrulama</h1>
+  <p>E-Posta adresinize gönderilmiş 6 haneli numerik kodu lütfen aşağıya yazınız.</p>
+
+  <form action="verify-email" method="POST">
+    {% csrf_token %}
+
+    <label for="verification-code">Doğrulama Kodu:</label>
+    <input type="number" name="verification-code" id="verification-code" placeholder="xxxxxx" min="100000" max="999999">
+<br><br>
+    <input type="submit" value="Doğrula">
+  </form>
+</body>
+</html>
