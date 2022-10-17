@@ -1,0 +1,195 @@
+html {
+  overflow-y: hidden;
+}
+
+.footer {
+  display: none;
+}
+
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 11rem;
+  width: 100%;
+  height: calc(100vh - 8rem);
+  position: absolute;
+  top: 8rem;
+}
+
+
+
+/* WORKS  */
+
+.work-topics {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+}
+
+.work-topic {
+  background-image: linear-gradient(to right bottom, #FFA94D, #FFC078);
+  width: 25rem;
+  height: 25rem;
+  border-radius: 7px;
+  color: #FFF4E6;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-icon {
+  font-size: 6.25rem;
+}
+
+.work-header {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-top: 3.4rem;
+  margin-bottom: 1rem;
+}
+
+.work-description {
+  font-size: 1.6rem;
+  font-weight: 400;
+  width: 80%;
+}
+
+/* LAST POSTS  */
+
+.last-posts {
+  text-align: center;
+  width: 100%;
+  color: #FFF4E6;
+}
+
+.last-posts-container {
+  margin-top: 7rem;
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%
+}
+
+.sub-work {
+  width: 40rem;
+  height: 25rem;
+  border-radius: 7px;
+  background-image: linear-gradient(to right bottom, rgb(255, 169, 77, .9), rgb(255, 192, 120, .9)), url('./images/denemecover.jpg');
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  flex-direction: column;
+
+  justify-content: space-between;
+  padding: 2rem 1.5rem;
+}
+
+.post__subheading {
+  font-size: 1.4rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #FFE8CC;
+}
+
+.post__title {
+  color: #FFF4E6;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.post__content {
+  font-size: 1.4rem;
+  text-align: left;
+  font-weight: 400;
+  color: #FFE8CC;
+  margin-bottom: 3.6rem;
+  margin-top: 2.4rem;
+}
+
+
+
+.post__read-more:link, .post__read-more:visited {
+  display: block;
+  background-image: linear-gradient(to bottom right, #FD7E14, #FF922B);
+  font-size: 1.4rem;
+  color: #eee;
+  width: 12rem;
+  height: 4rem;
+  display: grid;
+  place-items: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 5px;
+}
+
+.post__interaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.post__metric {
+  display: flex;
+  align-items: center;
+  gap: .6rem;
+}
+
+.post__publish-date-icon {
+  font-size: 1.6rem;
+}
+
+/* INSPECTED POSTS  */
+
+.inspected-works {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 4.8rem 3.6rem;
+  padding: 4.8rem 0;
+}
+
+
+.inspected-work {
+  height: 26rem;
+  width: 50rem;
+  padding: 1.8rem 1rem;
+}
+
+.inspected-work .post__content {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+}
+
+.inspected-work .post__publish-date-icon {
+  font-size: 1.4rem;
+}
+
+.post__details {
+  color: #FFE8CC;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  gap: .3rem;
+}
+
+.inspected-work .post__metric-count {
+  font-size: 1.2rem;
+}
+
+.inspected-work .post-interaction-icon {
+  font-size: 1.3rem;
+}
+
+.inspected-work .post__user-reaction {
+  display: flex;
+  justify-content: space-around
+}
+
+.wrapper.inspected {
+  align-items: center;
+  justify-content: flex-start;
+}

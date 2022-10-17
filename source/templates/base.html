@@ -1,0 +1,128 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Berker Okan &mdash; {% block titletext %} {% endblock %}</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/phosphor-icons"></script>
+
+    <link rel="stylesheet" href="/static/variables.css" />
+    <link rel="stylesheet" href="/static/base.css" />
+
+    <script src="/static/script.js" defer></script>
+
+    {% block head %} {% endblock head %}
+  </head>
+  <body>
+    <header class="header">
+      <a class="header__branding" href="/"><strong>Berker</strong> Okan</a>
+
+      <nav class="nav nav--main">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#about-us">Hakkımda</a></li>
+          <li><a class="nav__link" href="works">Çalışmalarım</a></li>
+          <li><a class="nav__link" href="#">Galeri</a></li>
+          <li>
+            <a class="nav__link nav__link--primary" href="#">Giriş Yap</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>{% block content %} {% endblock %}</main>
+    <footer class="footer">
+      <div class="container grid grid-footer">
+        <div class="logo-col">
+          <a href="#" class="footer-logo">
+            <a class="header__branding footer__branding" href="#"
+              ><strong>Berker</strong> Okan</a
+            >
+          </a>
+
+          <ul class="social-links">
+            <li>
+              <a
+                class="footer-link"
+                href="https://www.instagram.com/roketssal.roket/"
+                rel="noopener norefferer"
+                target="_blank"
+                ><ion-icon class="social-icon" name="logo-instagram"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a
+                class="footer-link"
+                href="https://www.linkedin.com/in/roketssal-roket-tak%C4%B1m%C4%B1-251140251"
+                rel="noopener norefferer"
+                target="_blank"
+                ><ion-icon class="social-icon" name="logo-linkedin"></ion-icon
+              ></a>
+            </li>
+            <li>
+              <a
+                class="footer-link"
+                href="https://twitter.com/roketssal?t=XlM7wU_t5AvxFhfcW6CruA&s=09"
+                rel="noopener norefferer"
+                target="_blank"
+                ><ion-icon class="social-icon" name="logo-twitter"></ion-icon
+              ></a>
+            </li>
+          </ul>
+
+          <p class="copyright">Copyright &copy; 2022 by Berker Okan.</p>
+        </div>
+        <nav class="nav-col">
+          <div class="footer-heading">Yararlı Linkler</div>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#about-us">Hakkımda</a></li>
+            <li><a class="footer-link" href="#gallery">Galeri</a></li>
+            <li><a class="footer-link" href="#cta">Şimdi Kaydol</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col">
+          <div class="footer-heading">Hesap</div>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#register">Şimdi Kaydol</a></li>
+            <li><a class="footer-link" href="#login">Giriş Yap</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col works-col">
+          <div class="footer-heading">Çalışmalarım</div>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Podcastler</a></li>
+            <li><a class="footer-link" href="#">Denemeler</a></li>
+            <li><a class="footer-link" href="#">Hikayeler</a></li>
+            <li><a class="footer-link" href="#">Kitap Eleştirileri</a></li>
+          </ul>
+        </nav>
+        <nav class="nav-col legal-col">
+          <div class="footer-heading">Legal</div>
+          <ul class="footer-nav">
+            <li><a class="footer-link" href="#">Gizlilik Politikası</a></li>
+            <li><a class="footer-link" href="#">Kullanım Esasları</a></li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+    <!-- {% if request.user.is_authenticated %}
+    <h1>Hesap: {{ request.user.username }}</h1>
+    <a href="profile">Hesabım</a>
+    <a href="authentication/change-password">Şifre Değiştir</a>
+    <a href="authentication/logout">Çıkış Yap</a>
+    {% else %}
+    <h1>Anasayfa, giriş yapabilir ve kayıt olabilirsin</h1>
+    <a href="authentication/login">Giriş Yap</a>
+    <a href="authentication/register">Kayıt Ol</a>
+    {% endif %} -->
+  </body>
+</html>

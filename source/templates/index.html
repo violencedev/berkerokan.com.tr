@@ -1,21 +1,192 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Berker Okan</title>
-  </head>
-  <body>
-    {% if request.user.is_authenticated %}
-    <h1>Hesap: {{ request.user.username }}</h1>
-    <a href="profile">Hesabım</a>
-    <a href="authentication/change-password">Şifre Değiştir</a>
-    <a href="authentication/logout">Çıkış Yap</a>
-    {% else %}
-    <h1>Anasayfa, giriş yapabilir ve kayıt olabilirsin</h1>
-    <a href="authentication/login">Giriş Yap</a>
-    <a href="authentication/register">Kayıt Ol</a>
-    {% endif %}
-  </body>
-</html>
+{% extends 'base.html' %}
+
+{% block titletext %}Anasayfa{% endblock %}
+
+{% block head %}     <link rel="stylesheet" href="/static/home.css" /> {% endblock %}
+
+{% block content %}
+      <section class="section-hero">
+        <div class="hero__information-box">
+          <h1 class="hero__heading">Berker Okan</h1>
+          <p class="hero__role">Yazar &amp; Öğretmen</p>
+          <p class="hero__description">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+            vulputate libero et velit interdum, ac aliquet odio mattis.
+          </p>
+          <a href="#" class="btn btn--primary me-md">Giriş Yap</a>
+          <a href="#" class="btn btn--secondary">Kayıt Ol</a>
+        </div>
+
+        <img
+          class="hero__composition"
+          src="/static/images/hero__composition.png"
+          alt="Berker Okan sınıfta ders anlatıyor, Berker Okan araç kullanıyor, Berker Okan kitap yazıyor"
+        />
+
+        <a href="#" class="scroll-bottom-box">
+          <p>bilgilenmeye başlamak için aşağı kaydır</p>
+          <ion-icon
+            name="chevron-down-circle-outline"
+            class="scroll-bottom-box__btn"
+          ></ion-icon>
+        </a>
+      </section>
+
+      <div class="concept">
+        <section class="section-about-me">
+          <img
+            class="about-me__image"
+            src="/static/images/about-me__image.png"
+            alt="Berker Okan sahilde geminin önünde poz veriyor"
+          />
+          <div class="about-me__content">
+            <p class="sub-heading">Hakkımda</p>
+            <h2 class="heading-secondary">Beni yakından tanımaya başla!</h2>
+            <p class="about-me__text">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis. Class
+              aptent taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos. Curabitur tempus urna at turpis condimentum
+              lobortis. Ut commodo efficitur neque. <br /><br />
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
+              vulputate libero et velit interdum, ac aliquet odio mattis. Class
+              aptent taciti sociosqu ad litora torquent per conubia nostra, per
+              inceptos himenaeos
+            </p>
+          </div>
+        </section>
+
+        <section class="section-gallery">
+          <div class="text-center">
+            <p class="sub-heading">Galeri</p>
+            <h2 class="heading-secondary">Geçmiş anıları tazelemeye başla!</h2>
+          </div>
+
+          <div class="photos-grid">
+            <div class="gallery__image-box">
+              <img
+                class="gallery__image"
+                src="/static/images/gallery1.jpg"
+                alt="Berker Okan galeri resmi"
+              />
+            </div>
+            <div class="gallery__image-box">
+              <img
+                class="gallery__image"
+                src="/static/images/gallery2.jpg"
+                alt="Berker Okan galeri resmi"
+              />
+            </div>
+            <div class="gallery__image-box">
+              <img
+                class="gallery__image"
+                src="/static/images/gallery3.jpg"
+                alt="Berker Okan galeri resmi"
+              />
+            </div>
+            <div class="gallery__image-box">
+              <img
+                class="gallery__image"
+                src="/static/images/gallery4.jpg"
+                alt="Berker Okan galeri resmi"
+              />
+            </div>
+            <div class="gallery__image-box">
+              <img
+                class="gallery__image"
+                src="/static/images/gallery5.jpg"
+                alt="Berker Okan galeri resmi"
+              />
+            </div>
+            <div class="gallery__image-box">
+              <img
+                class="gallery__image"
+                src="/static/images/gallery1.jpg"
+                alt="Berker Okan galeri resmi"
+              />
+            </div>
+            <div class="gallery__image-box">
+              <img
+                class="gallery__image"
+                src="/static/images/gallery2.jpg"
+                alt="Berker Okan galeri resmi"
+              />
+            </div>
+            <div class="gallery__image-box">
+              <img
+                class="gallery__image"
+                src="/static/images/gallery3.jpg"
+                alt="Berker Okan galeri resmi"
+              />
+            </div>
+            <div class="gallery__image-box">
+              <img
+                class="gallery__image"
+                src="/static/images/gallery4.jpg"
+                alt="Berker Okan galeri resmi"
+              />
+            </div>
+            <div class="gallery__image-box">
+              <img
+                class="gallery__image"
+                src="/static/images/gallery5.jpg"
+                alt="Berker Okan galeri resmi"
+              />
+            </div>
+            <div class="gallery__image-box">
+              <img
+                class="gallery__image"
+                src="/static/images/gallery1.jpg"
+                alt="Berker Okan galeri resmi"
+              />
+            </div>
+            <div class="gallery__image-box">
+              <img
+                class="gallery__image"
+                src="/static/images/gallery2.jpg"
+                alt="Berker Okan galeri resmi"
+              />
+            </div>
+            <div class="gallery__image-box">
+              <img
+                class="gallery__image"
+                src="/static/images/gallery3.jpg"
+                alt="Berker Okan galeri resmi"
+              />
+            </div>
+            <div class="gallery__image-box">
+              <img
+                class="gallery__image"
+                src="/static/images/gallery4.jpg"
+                alt="Berker Okan galeri resmi"
+              />
+            </div>
+            <div class="gallery__image-box">
+              <img
+                class="gallery__image"
+                src="/static/images/gallery5.jpg"
+                alt="Berker Okan galeri resmi"
+              />
+            </div>
+          </div>
+
+          <a href="#" class="gallery__link text-center"
+            >Bütün galeri içeriğine ve albümlere ulaşmak için tıklayın</a
+          >
+        </section>
+
+        <section class="section-cta">
+          <h2 class="heading-secondary">berkerokan.com.tr'e Şimdi Kaydol!</h2>
+          <p class="cta__content">
+            Yaratıcılığını, kendini bulabileceğin; Podcast, blog, deneme, hikaye
+            paylaşımlarının olduğu platforma şimdi başla!
+          </p>
+          <div class="cta__buttons">
+            <a href="#" class="btn btn--primary">Giriş Yap</a>
+            <a href="#" class="btn btn--secondary">Kayıt Ol</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+{% endblock %}
