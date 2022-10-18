@@ -6,5 +6,5 @@ urlpatterns = [
     path('', HomePageView, name = 'home'),
     re_path(r'^authentication/', include('authentication.urls'), name = 'authentication'),
     re_path(r'^profile/', include('user.urls'), name = 'profile'),
-    re_path(r'^works/(?P<work_type>.*)', WorksView, name = 'works'), 
+    re_path(r'^works/(?P<work_type>.*)/(?P<work_name>.*)', WorksView, name = 'works'), 
 ]

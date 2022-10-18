@@ -2,7 +2,22 @@
 {% block head %}
 <link rel="stylesheet" href="/static/works.css" />
 <style>
+
   .section-hero {
+    background: none ;
+  }
+
+  body {
+    background-image: linear-gradient(
+      rgb(255, 244, 230, 0.9),
+      rgb(255, 244, 230, 0.9)
+    ),
+    url(../static/images/hero__background.jpg);
+  background-position: center;
+  background-size: cover;
+  }
+  
+  html {
     overflow-y: scroll;
   }
 
@@ -28,7 +43,7 @@
         </p>
 
         <div class="post__interaction">
-          <a href="#" class="post__read-more">Devamını Oku</a>
+          <a href="a" class="post__read-more">Devamını Oku</a>
           <div class="post__details">
             <span class="post__publish-date post__metric"><i class="ph-clock post__publish-date-icon"></i> <div class="date post__metric-count">21.13 - 17.10.2022</div></span>
             <div class="post__user-reaction">
@@ -37,7 +52,8 @@
             </div>
           </div>
         </div>
-      </div>      <div class="inspected-work sub-work">
+      </div>      
+      <div class="inspected-work sub-work">
         <header class="post__header">
           <p class="post__subheading">Denemeler</p>
           <h3 class="post__title">Ben Bir Sıfat Buldum</h3>

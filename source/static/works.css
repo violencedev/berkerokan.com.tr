@@ -112,7 +112,7 @@ html {
 
 
 
-.post__read-more:link, .post__read-more:visited {
+.post__read-more:link, .post__read-more:visited, .post__read-more {
   display: block;
   background-image: linear-gradient(to bottom right, #FD7E14, #FF922B);
   font-size: 1.4rem;
@@ -120,6 +120,7 @@ html {
   width: 12rem;
   height: 4rem;
   display: grid;
+  border: none;
   place-items: center;
   border-top-left-radius: 5px;
   border-top-right-radius: 0;
@@ -192,4 +193,121 @@ html {
 .wrapper.inspected {
   align-items: center;
   justify-content: flex-start;
+}
+
+.inspected-post {
+  width: 80%;
+  padding-bottom: 4.8rem;
+  height: max-content;
+}
+
+.inspected-post .post__header {
+  text-align: center;
+}
+
+.inspected-post .post__subheading {
+  font-size: 2rem;
+}
+
+.inspected-post .post__title {
+  font-size: 3rem;
+}
+
+.publish-comment {
+  background-color: #FF922B;
+  width: 36rem;
+  height: 16rem;
+}
+
+pre {
+  font-family: inherit;
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;  
+}
+
+textarea {
+  width: 75rem;
+  height: 15rem;
+  padding: .5rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  font-size: 1.5rem;
+  font-family: inherit;
+  resize: none;
+  color: #222;
+}
+
+.input__group input {
+  font-family: inherit;
+  color: #222;
+  padding: .5rem;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: .5rem;
+}
+
+.input__group textarea {
+  margin-bottom: 1rem;
+}
+
+.inspected-post .post__details {
+  margin-left: auto;
+
+}
+
+.comments {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.2rem;
+}
+
+.comment-details {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  font-weight: 600; 
+}
+
+.comment-details .date {
+  font-weight: 400;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  position: relative;
+}
+
+.comment:nth-of-type(odd)::before {
+  content: '';
+  position: absolute;
+  right: -2%;
+  top: 0;
+  background-color:#ffc078;
+  width: 1px;
+  height: 90%;
+  transform: translateY(5%);
+}
+
+.comment:nth-of-type(n+3)::after {
+  content: '';
+  position: absolute;
+  height: .1px;
+  width: 95%;
+  background-color: #ffc078;
+  /* transform: translateX(10%); */
+  top: -12.5%;
+}
+
+.comment i {
+  font-size: 5rem;
+}
+
+.comments {
+  margin-top: 4.8rem;
 }

@@ -1,0 +1,122 @@
+{% extends 'base.html' %} 
+{% block head %}
+<link rel="stylesheet" href="/static/works.css" />
+<style>
+
+  .section-hero {
+    background: none ;
+  }
+
+  body {
+    background-image: linear-gradient(
+      rgb(255, 244, 230, 0.9),
+      rgb(255, 244, 230, 0.9)
+    ),
+    url(../static/images/hero__background.jpg);
+  background-position: center;
+  background-size: cover;
+  }
+  
+  html {
+    overflow-y: scroll;
+  }
+
+  .wrapper {
+    padding: 4.8rem;
+  }
+
+
+
+</style>
+{% endblock %} 
+{% block content %} 
+<section class="section-hero">
+  <div class="wrapper inspected">
+    <div class="inspected-post sub-work">
+      <header class="post__header">
+        <p class="post__subheading">Denemeler</p>
+        <h3 class="post__title">Ben Bir Sıfat Buldum</h3>
+      </header>
+  
+      <pre class="post__content">
+        Dünya milyarlarca yıldır devam eden bir film. Başında mıyız henüz, ortası mı burası, yoksa son oyuncuları biz miyiz bilmeden bir yerinden dahil oluyoruz bu filme; çoklukla da figüran olarak atıveriyor­lar seni sahnenin ortasına. Tek repliğin var: O da ağlamak. Şans­lıysan “Bu annendir, bu baban” diyorlar. Onların dili, dilin oluyor; acısı acın, düşmanı düşmanın, mazisi mazin... Şanssızsan o da yok. Bir toplumda yoğrulursun sonra; hamuruna gerekli gereksiz neler neler katarlar: Örf, âdet, töre, sınırlar... Biraz dik durmayı öğrendiğinde de coğrafyanın yüklerini verirler omuzuna: Hamal bir Ortadoğulu da olabilirsin; kuş kadar hafif bir İskandinavyalı da. Aklın ermeye başladığında ise, “Bu dinindir” derler. “Bu ka­derin, bu da sana biçilen rol. İşte şu da yolun; yürü yolun sonuna kadar.” Yolun sonu neresi; kim iyi, kim kötü; kim kazanan, kim kaybeden; doğru, yanlış nedir bilmeden, cevaplanmamış onlarca soruyla, oynuyoruz rolümüzü: Yaşıyoruz ve ölüyoruz.
+  
+        Hayat süreleri ve nitelikleri farklı olsa da insanlar iki olayda eşittir: Doğum ve ölüm. Doğum üzerinde uzlaşılır. O beyaz bir sayfadır. Ölüm de doğumun doğal neticesidir aslında fakat her inanç kendine has tanımlamıştır onu. İnançlar, ölümü ve sonra­sını dizayn etmek istemiştir hep çünkü adına yaşam dediğimiz ve her inancın kendisine borçlu kıldığı kavram için yaşam boyu bir şikâyet mekanizması yoktur. Tanrılar bedenin başına gelenle ilgilenmez fakat ruh depozitoludur; her Tanrı, ölümle birlikte, ru­hunu geri ister. Ölüm, kiminde bir düğün, kiminde sırların çözül­düğü bir düğüm, kiminde bir başlangıç, kiminde de devridaimin bir parçası yeniden, yeniden, yeniden gelmek için. Hatta bir de “Karbondan geldik; karbona döneceğiz” diyenler var. Onlar için ise mutlak bir nihayettir ölüm. Ölüm ve sonrası hakkında ne çok şey biliriz. İnsanların geneli ölümün sonrasına inanmaya meyyal­dir çünkü bir ömrün içinde defalarca ölür ve yeniden doğar çün­kü yaşadığı hayat ile yaşamak istediği hayat arasındaki farkı ebedi hayatında tahsil edeceğine inanmıştır çünkü çaresizce katlandığı acıların bir mükâfatı olduğuna inanmak istemektedir...
+        
+        Ne var ki dünyada ölüm ve ölüm sonrası hakkında yazılan her şeyi yaşayanlar yazdı, hem de ölümü tatmadan. Ama gel gör ki gurmesi olmayan bu tadı, herkes bildiğini sanır.
+        
+        Diğer yandan tonlarca atasözü söylendi, hikâyeler, masallar, peygamber kıssaları ve tragedyalar yazıldı yaşamak üzerine. Ve milyarlarca insan gelip geçti bu sahneden. Fakat yaşamak hak­kında çok şey bilmeyiz. Bir kibrit kadar bile aydınlatamaz birinin yolunu, cayır cayır yansa da koca bir ömür çünkü ruh acemidir; yaşar ve öğrenir.
+      </pre>
+  
+      <div class="post__interaction">
+        <form action="" method="POST">
+          <div class="input__group">
+            <input type="text" name="nickname" id="nickname" placeholder="Takma ad">
+          </div>
+          <div class="input__group">
+            <textarea name="content" id="content" placeholder="Yorumunuzu buraya yazın"></textarea>
+          </div>
+  
+          <button class="post__read-more">Yorumu Gönder</button>
+        </form>
+      
+        <div class="post__details">
+          <span class="post__publish-date post__metric"><i class="ph-clock post__publish-date-icon"></i> <div class="date post__metric-count">21.13 - 17.10.2022</div></span>
+          <div class="post__user-reaction">
+            <span class="post__like post__metric"><i class="ph-thumbs-up post__publish-like-icon post-interaction-icon"></i> <div class="like post__metric-count">150</div></span>
+            <span class="post__like post__metric"><i class="ph-chat post__publish-like-icon post-interaction-icon"></i> <div class="comment post__metric-count">150</div></span>
+          </div>
+        </div>
+        
+      </div>
+      <div class="comments">
+        <div class="comment">
+          <i class="ph-user-circle"></i>
+          <div class="content">
+            <div class="comment-details">
+              <span>Berker Okan - <span class="date">4 sa.</span></span>
+            </div>
+            <p class="comment-content">Yine içimizden yine muhteşem akıcı bir anlatım yine içine alan tasvirler. Çok heyecanlandım hocam devamı gelecek mi ?Yine içimizden yine muhteşem akıcı bir anlatım yine içine alan tasvirler. Çok heyecanlandım hocam devamı gelecek mi ?Yine içimizden yine muhteşem akıcı bir anlatım yine içine alan tasvirler. Çok heyecanlandım hocam devamı gelecek mi ?
+            </p>
+          </div>
+          
+        </div>
+        <div class="comment">
+          <i class="ph-user-circle"></i>
+          <div class="content">
+            <div class="comment-details">
+              <span>Berker Okan - <span class="date">4 sa.</span></span>
+            </div>
+            <p class="comment-content">Yine içimizden yine muhteşem akıcı bir anlatım yine içine alan tasvirler. Çok heyecanlandım hocam devamı gelecek mi ?Yine içimizden yine muhteşem akıcı bir anlatım yine içine alan tasvirler. Çok heyecanlandım hocam devamı gelecek mi ?Yine içimizden yine muhteşem akıcı bir anlatım yine içine alan tasvirler. Çok heyecanlandım hocam devamı gelecek mi ?
+            </p>
+          </div>
+          
+        </div>
+        <div class="comment">
+          <i class="ph-user-circle"></i>
+          <div class="content">
+            <div class="comment-details">
+              <span>Berker Okan - <span class="date">4 sa.</span></span>
+            </div>
+            <p class="comment-content">Yine içimizden yine muhteşem akıcı bir anlatım yine içine alan tasvirler. Çok heyecanlandım hocam devamı gelecek mi ?Yine içimizden yine muhteşem akıcı bir anlatım yine içine alan tasvirler. Çok heyecanlandım hocam devamı gelecek mi ?Yine içimizden yine muhteşem akıcı bir anlatım yine içine alan tasvirler. Çok heyecanlandım hocam devamı gelecek mi ?
+            </p>
+          </div>
+          
+        </div>
+        <div class="comment">
+          <i class="ph-user-circle"></i>
+          <div class="content">
+            <div class="comment-details">
+              <span>Berker Okan - <span class="date">4 sa.</span></span>
+            </div>
+            <p class="comment-content">Yine içimizden yine muhteşem akıcı bir anlatım yine içine alan tasvirler. Çok heyecanlandım hocam devamı gelecek mi ?Yine içimizden yine muhteşem akıcı bir anlatım yine içine alan tasvirler. Çok heyecanlandım hocam devamı gelecek mi ?Yine içimizden yine muhteşem akıcı bir anlatım yine içine alan tasvirler. Çok heyecanlandım hocam devamı gelecek mi ?
+            </p>
+          </div>
+          
+        </div>
+      </div>
+  
+    </div>  
+  </div>
+</section>
+{% endblock %}
